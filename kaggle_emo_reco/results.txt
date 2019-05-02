@@ -1,0 +1,60 @@
+
+----- adaptive learning rate methods -----
+
+opt = Adam(lr=1e-3, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0) 
+Epoch 96/100
+224/224 [==============================] - 10s 47ms/step - loss: 0.7113 - acc: 0.7450 - val_loss: 0.9105 - val_acc: 0.6778
+Epoch 97/100
+224/224 [==============================] - 10s 46ms/step - loss: 0.7032 - acc: 0.7462 - val_loss: 0.9310 - val_acc: 0.6697
+Epoch 98/100
+224/224 [==============================] - 10s 46ms/step - loss: 0.6972 - acc: 0.7499 - val_loss: 0.9098 - val_acc: 0.6802
+Epoch 99/100
+224/224 [==============================] - 10s 46ms/step - loss: 0.7033 - acc: 0.7485 - val_loss: 0.9313 - val_acc: 0.6770
+Epoch 100/100
+224/224 [==============================] - 10s 46ms/step - loss: 0.6988 - acc: 0.7496 - val_loss: 0.9140 - val_acc: 0.6810
+
+
+
+---- opt = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.0) ----
+Epoch 96/100
+224/224 [==============================] - 10s 47ms/step - loss: 0.7203 - acc: 0.7438 - val_loss: 0.9330 - val_acc: 0.6744
+Epoch 97/100
+224/224 [==============================] - 10s 46ms/step - loss: 0.7112 - acc: 0.7487 - val_loss: 0.9373 - val_acc: 0.6686
+Epoch 98/100
+224/224 [==============================] - 11s 47ms/step - loss: 0.7053 - acc: 0.7485 - val_loss: 0.9590 - val_acc: 0.6640
+Epoch 99/100
+224/224 [==============================] - 11s 47ms/step - loss: 0.7102 - acc: 0.7450 - val_loss: 0.9271 - val_acc: 0.6712
+Epoch 100/100
+224/224 [==============================] - 11s 47ms/step - loss: 0.7116 - acc: 0.7442 - val_loss: 0.9446 - val_acc: 0.6669
+
+
+---- opt = RMSprop(lr=0.0001, rho=0.9, epsilon=1e-08, decay=0.0) ----
+Epoch 196/200
+224/224 [==============================] - 10s 47ms/step - loss: 0.8155 - acc: 0.7025 - val_loss: 0.9270 - val_acc: 0.6669
+Epoch 197/200
+224/224 [==============================] - 11s 48ms/step - loss: 0.8207 - acc: 0.7003 - val_loss: 0.9244 - val_acc: 0.6651
+Epoch 198/200
+224/224 [==============================] - 11s 48ms/step - loss: 0.8197 - acc: 0.7026 - val_loss: 0.9146 - val_acc: 0.6666
+Epoch 199/200
+224/224 [==============================] - 11s 48ms/step - loss: 0.8145 - acc: 0.7021 - val_loss: 0.9298 - val_acc: 0.6628
+Epoch 200/200
+224/224 [==============================] - 11s 47ms/step - loss: 0.8201 - acc: 0.6988 - val_loss: 0.9299 - val_acc: 0.6625
+
+
+
+opt = RMSprop(lr=0.0001, rho=0.9, epsilon=1e-08, decay=0)
+Epoch 00073: val_acc did not improve from 0.67293
+Epoch 74/200
+224/224 [==============================] - 18s 82ms/step - loss: 0.2363 - acc: 0.9175 - val_loss: 1.3574 - val_acc: 0.6741
+
+Epoch 00074: val_acc improved from 0.67293 to 0.67408, saving model to ../datasets/fer2013_best_model_epoch_74_val_acc_0.6741.hdf5
+Epoch 75/200
+224/224 [==============================] - 18s 82ms/step - loss: 0.2351 - acc: 0.9157 - val_loss: 1.3853 - val_acc: 0.6697
+
+Epoch 00075: val_acc did not improve from 0.67408
+Epoch 76/200
+224/224 [==============================] - 18s 82ms/step - loss: 0.2340 - acc: 0.9189 - val_loss: 1.3735 - val_acc: 0.6747
+
+Epoch 00076: val_acc improved from 0.67408 to 0.67466, saving model to ../datasets/fer2013_best_model_epoch_76_val_acc_0.6747.hdf5
+
+
